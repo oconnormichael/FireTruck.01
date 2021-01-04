@@ -47,7 +47,7 @@ function draw() {
 
   if (gameState === "play") {
 
-
+   
 
     if (keyDown("LEFT")) {
       firet.x = firet.x - 9;
@@ -123,10 +123,13 @@ function flame() {
     flame.x = Math.round(random(100, 400))
     flame.addImage(flameImage)
     flame.scale = 0.08;
-    flame.velocityY = 14;
+    flame.velocityY = 10;
     flame.lifetime = 900;
     flame.setCollider("circle", 0, 150, 240);
     flame.debug = false;
+     if(score>50){
+      flame.velocityY=15;
+    }
     flameGroup.add(flame);
   }
 }
@@ -137,10 +140,13 @@ function flame2() {
     flame2.x = Math.round(random(100, 400))
     flame2.addImage(flame2Image)
     flame2.scale = 0.08;
-    flame2.velocityY = 20;
+    flame2.velocityY = 15;
     flame2.lifetime = 900;
     flame2.setCollider("circle", 0, 150, 240);
     flame2.debug = false;
+    if(score>50){
+      flame2.velocityY=20;
+    }
     flameGroup2.add(flame2);
   }
 }
@@ -151,10 +157,13 @@ function flame3() {
     flame3.x = Math.round(random(100, 400))
     flame3.addImage(flame3Image)
     flame3.scale = 0.08;
-    flame3.velocityY = 25;
+    flame3.velocityY = 20;
     flame3.lifetime = 900;
     flame3.setCollider("circle", 0, 150, 240);
     flame3.debug = false;
+    if(score>50){
+      flame3.velocityY=25;
+    }
     flameGroup3.add(flame3);
   }
 }
