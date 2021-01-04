@@ -135,6 +135,7 @@ function flame() {
 }
 
 function flame2() {
+  if(score>10){
   if (frameCount % 300 === 0) {
     var flame2 = createSprite(200, -140)
     flame2.x = Math.round(random(100, 400))
@@ -148,10 +149,11 @@ function flame2() {
       flame2.velocityY=20;
     }
     flameGroup2.add(flame2);
-  }
+  }}
 }
 
 function flame3() {
+  if(score>25){
   if (frameCount % 500 === 0) {
     var flame3 = createSprite(200, -140)
     flame3.x = Math.round(random(100, 400))
@@ -165,7 +167,7 @@ function flame3() {
       flame3.velocityY=25;
     }
     flameGroup3.add(flame3);
-  }
+  }}
 }
 
 function water() {
